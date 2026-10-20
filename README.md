@@ -1,19 +1,19 @@
 # Isai Malai
 
-A Tamil-only audio player with a green mobile now-playing screen, search, a queue, saved tracks, and lossless-format local playback.
+A Tamil music player with a green mobile interface, local lossless library, search, lyrics, artwork, queue, previews, and listening settings.
 
 - Website: https://isai-malai.vercel.app/
-- Updated source bundle, including the Android WebView wrapper: [Isai-Malai-source.zip](https://github.com/Vasanthank994499/isai-malai/blob/main/Isai-Malai-source.zip)
-- Project license: [GNU GPL version 3](https://github.com/Vasanthank994499/isai-malai/blob/main/LICENSE)
+- [Current source bundle and Android project](https://github.com/Vasanthank994499/isai-malai/blob/main/Isai-Malai-source.zip)
+- [GNU GPL version 3 app license](https://github.com/Vasanthank994499/isai-malai/blob/main/LICENSE)
 
-## Audio catalog
+## Music
 
-The site searches Tamil-tagged Internet Archive records. It checks the item file list for a browser-playable FLAC, WAV, AIFF, or explicitly identified ALAC source before enabling playback; it never falls back to lossy files. Archive.org is not a complete Tamil music catalog, search matches may be non-song audio, and uploader-provided rights and format details are not independently verified. A lossless file format does not prove that the original master was lossless. This app does not include or license commercial recordings.
+Import lossless Tamil audio you own or have permission to use. The player accepts FLAC, WAV, AIFF, and identified ALAC. Lyrics and artwork can be added to each track. A licensed catalogue can be connected through an HTTPS JSON manifest described in the source bundle README. No commercial song catalogue, recordings, or cloud sign-in service are included. A lossless file extension cannot verify the source master.
 
 ## Android
 
-The source bundle includes an Android WebView project. The workflow under **Actions → Build Isai Malai Android APK** can produce an unsigned debug APK artifact after the Android SDK license input is checked. The artifact is temporary and is not a Google Play release. Chrome on Android can also install the website as a PWA.
+The source bundle includes an Android WebView project. The workflow under **Actions → Build Android APK** can produce a debug APK after the Android SDK license input is accepted. The artifact is for testing and is not signed for Play Store release. Chrome on Android can install the website as a PWA.
 
-## BitChord reference
+## Reference and rights
 
-The mobile player layout was informed by the supplied BitChord APK. BitChord's upstream project is licensed under GPL-3.0: [upstream license](https://github.com/kushagrasinghx/BitChord/blob/main/LICENSE). Isai Malai contains original source and branding; it does not include BitChord code, logo, or recordings. GPL-3.0 for the app software does not grant rights to music, cover art, or compositions.
+The supplied BitChord APK informed the feature study. Isai Malai has original code and branding. BitChord is [GPL-3.0 licensed](https://github.com/kushagrasinghx/BitChord/blob/main/LICENSE). The app software license does not grant rights to music, artwork, or lyrics.

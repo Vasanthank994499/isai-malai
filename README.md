@@ -1,14 +1,16 @@
 # Isai Malai
 
-A Tamil music player with a green mobile interface, local lossless library, search, lyrics, artwork, queue, previews, and listening settings.
+A green Tamil music discovery and player app for web and Android.
 
 - Website: https://isai-malai.vercel.app/
-- [Current source bundle and Android project](https://github.com/Vasanthank994499/isai-malai/blob/main/Isai-Malai-source.zip)
+- [Source bundle and Android project](https://github.com/Vasanthank994499/isai-malai/blob/main/Isai-Malai-source.zip)
 - [GNU GPL version 3 app license](https://github.com/Vasanthank994499/isai-malai/blob/main/LICENSE)
 
-## Music
+## Search and playback
 
-Import lossless Tamil audio you own or have permission to use. The player accepts FLAC, WAV, AIFF, and identified ALAC. Lyrics and artwork can be added to each track. A licensed catalogue can be connected through an HTTPS JSON manifest described in the source bundle README. No commercial song catalogue, recordings, or cloud sign-in service are included. A lossless file extension cannot verify the source master.
+Search includes Apple Music India song metadata and optional YouTube video search. To enable YouTube search, add a referrer-restricted YouTube Data API v3 key in Settings. Video results open in YouTube's standard visible embedded player with provider branding, controls, and ads. Video availability and audio quality are controlled by YouTube. Isai Malai does not extract or convert video audio and does not label provider video streams lossless. Search results are a discoverable subset, not every Tamil recording. Apple Music metadata links open Apple Music.
+
+Full-length audio in Isai Malai's audio player is for music you own or have rights to stream, including licensed HTTPS catalogue streams. File formats cannot prove that a recording came from a lossless master.
 
 ## Android
 
@@ -16,4 +18,4 @@ The source bundle includes an Android WebView project. The workflow under **Acti
 
 ## Reference and rights
 
-The supplied BitChord APK informed the feature study. Isai Malai has original code and branding. BitChord is [GPL-3.0 licensed](https://github.com/kushagrasinghx/BitChord/blob/main/LICENSE). The app software license does not grant rights to music, artwork, or lyrics.
+The supplied BitChord APK informed the feature study. Isai Malai uses original code and branding. BitChord is [GPL-3.0 licensed](https://github.com/kushagrasinghx/BitChord/blob/main/LICENSE). The app software license does not grant rights to music, artwork, or lyrics.

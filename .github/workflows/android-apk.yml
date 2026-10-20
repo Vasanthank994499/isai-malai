@@ -1,0 +1,47 @@
+name: Build Isai Malai Android APK
+on:
+  workflow_dispatch:
+    inputs:
+      accept_android_sdk_licenses:
+        description: Confirm that you reviewed and accept the Android SDK license agreements for this build
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build-debug-apk:
+    if: inputs.accept_android_sdk_licenses == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+      - name: Extract app bundle
+        run: unzip -q Isai-Malai-source.zip -d archive
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          accept-android-sdk-licenses: ${{ inputs.accept_android_sdk_licenses }}
+      - name: Install Android platform
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.7
+      - name: Build debug APK
+        working-directory: archive/isai-malai/android
+        run: gradle --no-daemon assembleDebug
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: isai-malai-debug-apk
+          path: archive/isai-malai/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
